@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.views.PostDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDetailPostTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat"
+                android:shadowColor="#00ccff"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="TextView"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:background="#ff00ff"
+                app:layout_constraintStart_toStartOf="@id/tvDetailPostTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvDetailPostTitle" />
+
+            <TextView
+                android:id="@+id/tvDetailPostBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/montserrat"
+                android:shadowColor="#ffa"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="Post Body"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailPostTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailPostTitle" />
+
+
+            <View
+                android:id="@+id/vBelowPost"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:background="#ff00ff"
+                app:layout_constraintStart_toStartOf="@id/tvDetailPostBody"
+                app:layout_constraintTop_toBottomOf="@id/tvDetailPostBody" />
+
+            <TextView
+                android:id="@+id/tvCommentSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Comment Section"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@id/vBelowPost"
+                app:layout_constraintTop_toBottomOf="@id/vBelowPost" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDetailRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAddCommentSection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCommentSection" />
+
+            <!--        Add comment section-->
+
+            <TextView
+                android:id="@+id/tvAddCommentSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add A Comment"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@id/ln"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvDetailRecyclerView" />
+
+            <LinearLayout
+                android:id="@+id/ln"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddCommentSection">
+
+
+                <EditText
+                    android:id="@+id/etAddCommentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name Here" />
+
+                <EditText
+                    android:id="@+id/etAddCommentEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name Here" />
+
+                <EditText
+                    android:id="@+id/etAddCommentBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name Here" />
+
+                <Button
+                    android:id="@+id/btSendComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Comment"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

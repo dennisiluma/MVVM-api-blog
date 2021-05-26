@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.views.MyCustomPostActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Post Section"
+                android:textAlignment="center"
+                android:textSize="30sp"/>
+
+            <View
+                android:id="@+id/vBelowPost"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:background="#ff00ff" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPostRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!--        Add Post section-->
+
+            <TextView
+                android:id="@+id/tvAddPostSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add A Post Below"
+                android:textAlignment="center"
+                android:textSize="30sp"/>
+
+
+
+                <EditText
+                    android:id="@+id/etAddPostTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your Post Title" />
+
+
+                <EditText
+                    android:id="@+id/etAddPostBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your Post Body" />
+
+                <Button
+                    android:id="@+id/btSendPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Post" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
