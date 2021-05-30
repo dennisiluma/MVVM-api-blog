@@ -5,10 +5,6 @@ Using the endpoints found here https://jsonplaceholder.typicode.com build a simp
 
 ### Implementation 1:
 
-Use MVI architecture 
-
-### Implementation 2:
-
 Use MVVM architecture 
 
 
